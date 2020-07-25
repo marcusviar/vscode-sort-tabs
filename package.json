@@ -1,0 +1,82 @@
+{
+    "name": "sort-tabs",
+    "displayName": "Sort Tabs",
+    "description": "Sort tabs alphabetically and group by file extension",
+    "version": "1.0.0",
+    "publisher": "marcusviar",
+    "engines": {
+        "vscode": "^1.47.0"
+    },
+    "license": "SEE LICENSE IN LICENSE.txt",
+    "bugs": {
+        "url": "https://github.com/marcusviar/vscode-sort-tabs/issues",
+        "email": "code@marcusviar.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/marcusviar/vscode-sort-tabs.git"
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "tabs",
+        "editors",
+        "group",
+        "order",
+        "alphabetical"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "configuration": {
+            "title": "Statusbar message",
+            "properties": {
+                "sort-tabs.showStatusbarMessage": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "True: show statusbar message after a tab is sorted. False: don't show statusbar message"
+                },
+                "sort-tabs.statusbarMessageAlignment": {
+                    "type": "string",
+                    "default": "Right",
+                    "description": "Changes to this value require a VScode reload. 'Left' to display statusbar message on the left. 'Right' to display the statusbar message on the right."
+                },
+                "sort-tabs.statusbarMessagePriority": {
+                    "type": "number",
+                    "default": 1000,
+                    "description": "Changes to this value require a VScode reload. Higher value means the statusbar message should be shown more to the left. Example: With a sort-tabs.statusbarMessageAlignment set to 'Left' and a sort-tabs.statusbarMessagePriority set to '1000' the statusbar message will be displayed on the left side of the statusbar on the left side of other, left aligned, statusbar items (unless another statusbar item has a priority higher than 1000)."
+                },
+                "sort-tabs.statusbarMessageColor": {
+                    "type": "string",
+                    "default": null,
+                    "description": "Hex or RGB color code for the status bar message text"
+                },
+                "sort-tabs.statusbarMessageDuration": {
+                    "type": "number",
+                    "default": 4000,
+                    "description": "Duration in milliseconds to display the status bar message"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "node ./test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.47.0",
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^7.0.2",
+        "@types/node": "^13.11.0",
+        "eslint": "^6.8.0",
+        "glob": "^7.1.6",
+        "mocha": "^7.1.2",
+        "typescript": "^3.8.3",
+        "vscode-test": "^1.3.0"
+    },
+    "__metadata": {}
+}
