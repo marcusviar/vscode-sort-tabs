@@ -2,7 +2,7 @@
     "name": "sort-tabs",
     "displayName": "Sort Tabs",
     "description": "Sort tabs alphabetically and group by file extension",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "marcusviar",
     "engines": {
         "vscode": "^1.47.0"
