@@ -1,3 +1,7 @@
+# Deprecated
+
+This VScode extension is no longer maintained do to the lack of VScode API features needed to make it work correctly.
+
 # sort-tabs
 
 Sort tabs alphabetically and group by file extension.
